@@ -1,0 +1,63 @@
+.kick-link-preview {
+  position: fixed;
+  z-index: 2147483647;
+  background: rgba(0, 0, 0, 0.95);
+  border-radius: 12px;
+  padding: 12px;
+  width: 320px;
+  height: 180px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.kick-link-preview.visible {
+  display: block !important;
+  opacity: 1 !important;
+}
+
+.kick-link-preview iframe {
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+
+.kick-link-preview .error {
+  color: #ff4444;
+  text-align: center;
+  padding: 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kick-link-preview .loading {
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+}
+
+/* Ensure preview container is above other elements */
+body {
+  position: relative;
+}
+
+/* Force show preview container when needed */
+.kick-link-preview[style*="display: block"] {
+  display: block !important;
+  opacity: 1 !important;
+} 

@@ -1,0 +1,43 @@
+{
+  "name": "kick-link-preview",
+  "version": "0.1",
+  "description": "Preview YouTube, Instagram, and Twitter links directly in Kick chat",
+  "main": "dist/content.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js && node scripts/generate-icons.js",
+    "build:chrome": "npm run build && node scripts/package.js chrome",
+    "build:firefox": "npm run build && node scripts/package.js firefox",
+    "build:edge": "npm run build && node scripts/package.js edge",
+    "build:all": "npm run build:chrome && npm run build:firefox && npm run build:edge",
+    "watch": "webpack --config webpack.config.js --watch",
+    "icons": "node scripts/generate-icons.js",
+    "create-source": "node scripts/create-source-zip.js"
+  },
+  "keywords": [
+    "kick",
+    "chrome-extension",
+    "preview",
+    "youtube",
+    "instagram",
+    "twitter"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chrome": "^0.0.254",
+    "@types/node": "^20.11.5",
+    "@types/webextension-polyfill": "^0.12.1",
+    "archiver": "^7.0.1",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.9.1",
+    "sharp": "^0.33.5",
+    "style-loader": "^3.3.4",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.3.3",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "webextension-polyfill": "^0.10.0"
+  }
+}
