@@ -2,100 +2,63 @@
 
 Preview YouTube, Instagram, and Twitter links directly in Kick.com chat.
 
-## 🌟 Chrome Installation
+### 🌟 Chrome Installation
 
-1. [Click here](https://github.com/your-username/kick-link-preview/raw/main/kick-link-preview-chrome.zip) to download the extension.
+1. [Click here](https://github.com/postaldudegoespostal/kick-link-preview/raw/main/dist/chrome.zip) to download the extension.
 2. Extract the downloaded ZIP file.
-3. Go to `chrome://extensions` in Chrome.
-4. Enable "Developer mode" in the top right.
-5. Click "Load unpacked".
-6. Select the extracted folder.
+3. Open Chrome and go to `chrome://extensions/`
+4. Enable "Developer mode" in the top right corner.
+5. Click "Load unpacked" and select the extracted folder.
 
-That's it! You can now see link previews on Kick.com.
+### 🦊 Firefox Installation
 
-<a href="https://github.com/your-username/kick-link-preview/raw/main/kick-link-preview-chrome.zip">
-  <img src="https://user-images.githubusercontent.com/25423296/163456518-d8bcb1d4-1e9e-4a1e-8f61-ce3a514d8228.png" width="200" alt="Download Extension" />
-</a>
+The extension is available on Firefox Add-ons.
 
-## Beta v0.1.11 (Hotfix)
+### 🌐 Edge Installation
 
-### 🛠️ Fixes & Improvements
-- Fixed Enable Plugin functionality (you can now completely disable the extension)
-- Fixed YouTube volume control (volume settings are now correctly applied)
-- Fixed dashboard page crashes
-- Optimized preview sizes:
-  - YouTube: 480x360 (4:3 ratio)
-  - Twitter: 450x450
-  - Instagram: 400x600
+The extension is available on Edge Add-ons.
 
-### 🔜 Upcoming Features
-- Prnt.sc preview support
-- Hizliresim preview support
-- Autoplay for Instagram videos
+### 🔄 Recent Updates (Beta v0.1.11)
 
-## Installation for Other Browsers
+- Fixed Enable Plugin feature
+- Improved YouTube volume control
+- Enhanced dashboard page stability
+- Optimized preview sizes for various platforms
 
-### Firefox
-1. Go to `about:debugging`
-2. Click on "This Firefox"
-3. Click "Load Temporary Add-on" and select manifest.json from the `dist-firefox` folder
-
-### Edge
-1. Go to `edge://extensions`
-2. Enable Developer mode
-3. Click "Load unpacked" and select the `dist-edge` folder
-
-### Opera
-1. Go to `opera://extensions`
-2. Enable Developer mode
-3. Click "Load unpacked" and select the `dist` folder (compatible with Chrome version)
-
-## Build Instructions
-
-To build for different browsers:
+### 🛠️ Development
 
 ```bash
-# For Chrome
-npm run build:chrome
+# Install dependencies
+npm install
 
-# For Firefox
+# Build for all browsers
+npm run build:all
+
+# Build for specific browser
+npm run build:chrome
 npm run build:firefox
-
-# For Edge
 npm run build:edge
-
-# For Opera (use Chrome build)
-npm run build:chrome
 ```
 
-## Notes
+### 📝 Notes
 
-- This extension is in beta, bugs may occur
-- If you encounter any issues, you can disable the extension using the Enable Plugin toggle
-- Volume control only applies to YouTube videos
+- This extension is in beta. Please report any issues.
+- Supports YouTube, Instagram, and Twitter previews.
+- More platforms coming soon.
 
-## 💻 Supported Browsers
+### 🌐 Supported Browsers
+
 - Google Chrome
 - Mozilla Firefox
 - Microsoft Edge
-- Opera
+- Opera (Use Chrome version)
 
-## 🛠️ Developer Notes
+### 👨‍💻 Developer Notes
 
-### Build Commands
-```bash
-# Build for Chrome
-npm run build:chrome
+- Node.js and npm required for development
+- Uses Manifest V3
+- TypeScript for type safety
 
-# Build for Firefox
-npm run build:firefox
+### 📜 License
 
-# Build for Edge
-npm run build:edge
-
-# Build for Opera
-npm run build:chrome
-```
-
-## 📝 License
-MIT License - All rights reserved. 
+MIT License - feel free to use and modify. 
