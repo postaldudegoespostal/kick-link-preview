@@ -1,9 +1,6 @@
 # dependencies
 /node_modules
 
-# production
-/dist
-
 # env files
 .env
 .env.local
